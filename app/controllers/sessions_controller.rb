@@ -16,7 +16,6 @@ class SessionsController < ApplicationController
         end 
     end
 
-
     def logged_in 
         if @current_user 
             render json: {
@@ -27,6 +26,7 @@ class SessionsController < ApplicationController
             render json: {
                 logged_in: false
             }
+        end
     end
 
     def logout 
